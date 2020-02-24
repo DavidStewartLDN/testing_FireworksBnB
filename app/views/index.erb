@@ -1,0 +1,42 @@
+<head>
+</head>
+
+<body>
+  <h1>Fireworks BnB</h1>
+  <div>
+    <form action="/add_user">
+      <input type='submit' value='Add User'>
+    </form>
+    <form action="/add_space">
+      <input type='submit' value='Add Space'>
+    </form>
+    <form action="/add_booking">
+      <input type='submit' value='Add Booking'>
+    </form>
+  </div>
+  
+  <div>
+    <h1> User feed! </h1>
+    <ul>
+      <% @users.each do |user| %>
+        <li><%= user.username %> </li>
+      <% end %>
+    </ul>
+  </div>
+   <div>
+    <h1> Space feed! </h1>
+    <ul>
+      <% @spaces.each do |space| %>
+        <li>Property name: <%= space.property_name %> Description: <%= space.description %> Price: <%= space.price %> </li>
+      <% end %>
+    </ul>
+  </div>
+   <div>
+    <h1> Booking feed! </h1>
+    <ul>
+      <% @bookings.each do |booking| %>
+        <li>Start date: <%= booking.start_date %> End date: <%= booking.end_date %> Confirmation: <%= booking.confirmation %> </li>
+      <% end %>
+    </ul>
+  </div>
+</body>
