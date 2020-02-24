@@ -1,0 +1,17 @@
+default: &default
+  adapter: sqlite3
+  encoding: unicode
+  pool: 2
+
+development:
+  <<: *default
+  adapter: sqlite3
+  encoding: unicode
+  database: fireworksbnb
+  pool: 2
+
+test:
+  adapter: sqlite3
+  encoding: unicode
+  database: fireworksbnb_test
+  pool: 2
