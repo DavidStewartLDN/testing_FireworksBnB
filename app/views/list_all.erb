@@ -3,11 +3,8 @@
 
 <body>
   <h1>Fireworks BnB</h1>
-  <div>
-    <form action="/login">
-      <input type='submit' value='Login'>
-    </form>
-  </div>
+  <h2> Current user: <%= @current_user %> </h2>
+  <h2> current id: <%= @user_id %> </h2>
   <div>
     <form action="/add_user">
       <input type='submit' value='Add User'>

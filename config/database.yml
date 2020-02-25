@@ -5,13 +5,8 @@ default: &default
 
 development:
   <<: *default
-  adapter: sqlite3
-  encoding: unicode
   database: fireworksbnb
-  pool: 2
 
 test:
-  adapter: sqlite3
-  encoding: unicode
+  <<: *default
   database: fireworksbnb_test
-  pool: 2
