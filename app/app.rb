@@ -15,6 +15,18 @@ class FireworksBnB < Sinatra::Base
     erb :index
   end
 
+  # login to users account
+
+  get '/login' do
+    erb :login
+  end
+
+  # Verify login details against database
+
+  post '/login/validate' do
+    # erb :
+  end
+
   # Add new user
 
   get '/add_user' do
